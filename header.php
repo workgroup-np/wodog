@@ -14,7 +14,7 @@
 
  * @subpackage Wodog_leak
 
- * @since Wodog Lea
+ * @since Wodog 1.0
 
  */
 
@@ -90,47 +90,72 @@ endif;?>
 
     <nav class="navbar tbeer-main-menu" role="navigation">
 
-    <!-- Top Bar -->
+      <div class="container-fluid">
 
-        <div class="tbeer-header-topbar">
+        <div class="row">
 
-              <div class="container">
+                <!-- Navbar Toggle -->
 
-                <div class="row">
+                <div class="navbar-header">
 
-                  <!-- Navbar Toggle -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 
-                    <div class="navbar-header">
+                        <span class="icon-bar"></span>
 
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
 
-                          <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
 
-                          <span class="icon-bar"></span>
+                    </button>
 
-                          <span class="icon-bar"></span>
+                    <!-- Logo -->
 
-                      </button>
+                      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 
-                      <!-- Logo -->
+                        <?php if($wodog_options['logo']['url']!=""):?>
 
-                        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                            <img class="logo" src="<?php echo esc_url($wodog_options['logo']['url']);?>" data-at2x="<?php echo esc_url($wodog_options['retina']['url']); ?>" alt="<?php bloginfo( 'name' ); ?>">
 
-                          <?php if($wodog_options['logo']['url']!=""):?>
+                        <?php else:?>
 
-                              <img class="logo" src="<?php echo esc_url($wodog_options['logo']['url']);?>" data-at2x="<?php echo esc_url($wodog_options['retina']['url']); ?>" alt="<?php bloginfo( 'name' ); ?>">
+                            <?php bloginfo( 'name' ); ?>
 
-                          <?php else:?>
+                        <?php endif;?>
 
-                              <?php bloginfo( 'name' ); ?>
+                      </a>
 
-                          <?php endif;?>
+                </div>
 
-                        </a>
+                <!-- Navbar Toggle End -->
 
-                    </div>
+              <!-- navbar-collapse start-->
 
-                  <!-- Navbar Toggle End -->
+              <div id="nav-menu" class="navbar-collapse tbeer-menu-wrapper collapse" role="navigation">
+
+                <?php
+
+                  wp_nav_menu( array(
+
+                  'theme_location'    => 'primary',
+
+                  'container'         => '',
+
+                  'container_class'   => '',
+
+                  'container_id'      => 'bs-example-navbar-collapse-1',
+
+                  'menu_class'        => 'nav navbar-nav tbeer-menus',
+
+                  'fallback_cb'       => 'wodog_bootstrap_navwalker::fallback',
+
+                  'walker'            => new wodog_bootstrap_navwalker())
+
+                  );?>
+
+              </div>
+
+              <!-- navbar-collapse end-->
+              <div class="tbeer-social-and-search-wrapper">
 
                 <?php
 
@@ -174,50 +199,6 @@ endif;?>
 
                   <!-- Social Icons End -->
 
-                </div>
-
-            </div>
-
-        </div>
-
-    <!-- Top Bar End -->
-
-     <!-- Bottom Bar -->
-
-        <div class="tbeer-header-bottombar">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <!-- navbar-collapse start-->
-
-                    <div id="nav-menu" class="navbar-collapse tbeer-menu-wrapper collapse" role="navigation">
-
-                      <?php
-
-                        wp_nav_menu( array(
-
-                        'theme_location'    => 'primary',
-
-                        'container'         => '',
-
-                        'container_class'   => '',
-
-                        'container_id'      => 'bs-example-navbar-collapse-1',
-
-                        'menu_class'        => 'nav navbar-nav tbeer-menus',
-
-                        'fallback_cb'       => 'wodog_bootstrap_navwalker::fallback',
-
-                        'walker'            => new wodog_bootstrap_navwalker())
-
-                        );?>
-
-                    </div>
-
-                    <!-- navbar-collapse end-->
-
                     <?php if(isset($wodog_options['search'])&&$wodog_options['search']==1):?>
                       <div class="tbeer-header-search-wrapper">
 
@@ -230,18 +211,23 @@ endif;?>
                           </form>
 
                         </div>
-                        <a href="#" class="tbeer-header-search-btn"><i class="ion-ios-search-strong"></i></button></a>    
+                        <a href="#" class="tbeer-header-search-btn">
+                          <i class="ion-ios-search-strong"></i>
+                        </a>    
 
                       </div>
 
                     <?php endif;?>
                     <!-- Search End-->
-                </div>
 
-            </div>
+              </div>
 
-        </div>       
+        </div>
 
+      </div>
+           
     </nav>
 
   </header>
+
+  

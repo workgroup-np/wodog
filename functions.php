@@ -46,8 +46,6 @@ require( trailingslashit( get_template_directory() ) . 'inc/metabox.php' );
 
 function wodog_setup() {
 
-
-
     global $wodog_options;
 
     // Set content width
@@ -302,9 +300,6 @@ function wodog_load_theme_assets() {
 
     wp_enqueue_style( 'wodog-style', get_stylesheet_uri() );
 
-    wp_enqueue_style( 'wodog-color-style', get_stylesheet_uri().'/assets/css/color-style.css' );
-
-
 
     // Enqueue all the js files of theme
 
@@ -383,7 +378,7 @@ function wodog_load_theme_assets() {
 
     } else {
 
-    $main_custom_color_primary= "#ff2dda";
+    $main_custom_color_primary= "#C427F7";
 
     }
 
@@ -393,7 +388,7 @@ function wodog_load_theme_assets() {
 
     } else {
 
-    $main_custom_color_hover= "#ff2dda";
+    $main_custom_color_hover= "#C427F7";
 
     }
 
@@ -589,7 +584,7 @@ function wodog_load_theme_assets() {
         }
         ';
 
-    wp_add_inline_style( 'wodog-color-style', $color_variation );
+    wp_add_inline_style( 'wodog-style', $color_variation );
 
 
 
