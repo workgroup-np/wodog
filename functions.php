@@ -1364,9 +1364,7 @@ function wodog_the_excerpt_max_charlength($charlength) {
     $charlength++;
 
 
-
     if ( mb_strlen( $excerpt ) > $charlength ) {
-
         $subex = mb_substr( $excerpt, 0, $charlength - 7 );
 
         $exwords = explode( ' ', $subex );
@@ -1375,19 +1373,18 @@ function wodog_the_excerpt_max_charlength($charlength) {
 
         if ( $excut < 0 ) {
 
-            return mb_substr( $subex, 0, $excut );
+            return mb_substr( $subex, 0, $excut ).'...';
 
         } else {
 
-            return $subex;
+            return $subex.'...';
 
         }
 
     } else {
 
-        return $excerpt;
+        return $excerpt.'...';
 
     }
 
 }
-

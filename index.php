@@ -74,8 +74,12 @@ endif;?>
                                         <h3 class="tbeer-news-post-heading">
                                             <a href="<?php the_permalink();?>"><?php the_title();?></a>
                                         </h3>
-                                        <div class="tbeer-news-post-excerpt">
-                                            <?php the_content();?>
+                                        <p class="tbeer-news-post-excerpt">
+                                            <?php echo wodog_the_excerpt_max_charlength(100);?>
+                                        </p>
+                                        <div class="tbeer-news-post-meta">
+                                            <span class="tbeer-news-post-date"><?php echo date("m.d.y");  ?></span>
+                                            <div class="tbeer-news-post-author"><?php the_author_posts_link();?></div>
                                         </div>
                                     </div>
                                     <!-- End -->
