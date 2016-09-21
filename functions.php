@@ -575,7 +575,8 @@ if ( ! class_exists( 'Wodog_Recent_Posts_Widget' ) ) :
                     echo ' <!-- FEATURED NEWS SECTION -->
                             <section class="tbeer-featured-news-section">
                                 <div class="container">
-                                <div class="row">
+                                    <div class="row">
+                                        <div class="tbeer-featured-news-wrapper">
                                 ';
                         while($header_query->have_posts()):
                             $header_query->the_post(); ?>
@@ -614,7 +615,8 @@ if ( ! class_exists( 'Wodog_Recent_Posts_Widget' ) ) :
                          $i++;
                         endwhile;
                         if( $i>1 ) echo '</div>';
-                    echo '</div>
+                        echo '</div>
+                            </div>
                         </div>
                     </section>';
                 endif;
