@@ -600,44 +600,6 @@ if (!class_exists('Redux_Framework_sample_config')) {
 
                         array(
 
-                            'id'        => 'must_read',
-
-                            'type'      => 'switch',
-
-                            'title'     => __('Show Must Read', 'wodog'),
-
-                            'subtitle'  => __('Show must read post\'s list in main page.', 'wodog'),
-
-                            'default'   => '1',
-
-                        ), 
-
-                        array(
-
-                            'id'        => 'right_must_read',
-
-                            'type'      => 'text',
-
-                            'title'     => __('Number of must read posts in number(right side)', 'wodog'),
-
-                            'default'   => '5',
-
-                        ), array(
-
-                            'id'        => 'left_must_read',
-
-                            'type'      => 'text',
-
-                            'title'     => __('Number of must read posts in list view(left side) ', 'wodog'),
-
-                            'default'   => '3',
-
-                        ), 
-
-
-
-                        array(
-
                             'id'        => 'single_blog',
 
                             'type'      => 'switch',
@@ -691,40 +653,6 @@ if (!class_exists('Redux_Framework_sample_config')) {
                 'title'     => __('Footer Options', 'wodog'),
 
                 'fields'    => array(
-
-                    array(
-
-                        'id'        => 'footer_logo',
-
-                        'type'      => 'media',
-
-                        'title'     => __('Footer Logo', 'buzz'),
-
-                    ), 
-
-                    array(
-
-                        'id'        => 'footer_text',
-
-                        'type'      => 'text',
-
-                        'title'     => __('Footer Text', 'buzz'),
-
-                        'default'     => __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus, velit iaculis accumsan dignissim, arcu nunc varius elit, iaculis porttitor lectus dolor vel dui.', 'buzz'),
-
-                    ), 
-
-                    array(
-
-                        'id'        => 'footer_icons',
-
-                        'type'      => 'switch',
-
-                        'title'     => __('Footer Social Icons', 'buzz'),
-
-                        'default'   => '1',
-
-                    ), 
 
                     array(
 

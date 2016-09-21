@@ -94,15 +94,6 @@ function wodog_widgets_setup() {
             'before_title'  => '<header class="heading"><h2>',
             'after_title'   => '</h2></header>'
         ));
-          register_sidebar(array(
-            'name' => "Footer Block Widgets Here",
-            'id' => "wodog-widgets-footer-block-1",
-            'description' => __('Widgets placed here will display in the footer block', 'wodog'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s tbeer-footer-widget tbeer-links-widget">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="tbeer-footer-widget-title">',
-            'after_title'   => '</h3>'
-        ));
     endif;
 }
 add_action('widgets_init', 'wodog_widgets_setup');
@@ -485,11 +476,6 @@ function wodog_post_meta() {
         'id'   => '_wodog_featured',
         'type' => 'checkbox',
         'desc' => 'Check if post is featured post.',
-    ) );$cmb->add_field( array(
-        'name' => 'Must Post',
-        'id'   => '_wodog_must',
-        'type' => 'checkbox',
-        'desc' => 'Check if post is must read post.',
     ) );
 }
 add_action( 'cmb2_admin_init', 'wodog_post_meta' );
