@@ -170,156 +170,82 @@ function wodog_load_theme_assets() {
     }
     $color_variation='
         ::selection {
-        background: '.$main_custom_color_primary.';
+          background: '.$main_custom_color_primary.';
         }
         ::-moz-selection {
-        background: '.$main_custom_color_primary.';
+          background: '.$main_custom_color_primary.';
         }
         @media only screen and (max-width: 767px) {
-        header.tbeer-header .navbar .icon-bar {
-        background-color: '.$main_custom_color_primary.';
+          header.tbeer-header .navbar .icon-bar {
+            background-color: '.$main_custom_color_primary.';
+          }
         }
+        tbeer-latest-article .tbeer-latest-article-details a.tbeer-category-meta,
+        .tbeer-btn.tbeer-outline-btn:hover,
+        a.tbeer-category-meta,
+        .tbeer-tag-type-heading,
+        .tbeer-featured-news-column .tbeer-featured-news .tbeer-news-details a.tbeer-category-meta,
+        .tbeer-latest-article .tbeer-latest-article-details a.tbeer-category-meta,
+        .tbeer-btn,
+        .tbeer-trending-article .tbeer-trending-article-details .tbeer-news-post-meta a:hover:before,
+        .tbeer-subscription-widget .tbeer-subscription-form form button,
+        .tbeer-trending-news-section .tbeer-trending-news-wrapper ul li a:hover:before,
+        .tbeer-main-content .tbeer-latest-article-wrapper .tbeer-load-more-wrapper a:hover,
+        .tbeer-main-content .tbeer-trending-news-wrapper .tbeer-load-more-wrapper a:hover ,
+        .tbeer-must-read-news-section .tbeer-section-title-wrapper h3.tbeer-section-btn-style-title,
+        .tbeer-must-read-news-section .tbeer-main-content .tbeer-must-read-news-wrapper .tbeer-must-read-news .tbeer-must-read-news-details a.tbeer-category-meta,
+        .tbeer-must-read-news-section .tbeer-main-content .tbeer-must-read-news-wrapper .tbeer-must-read-news .tbeer-must-read-news-details .tbeer-news-post-meta a:hover:before,
+        .tbeer-related-post-secion .tbeer-related-post-wrapper .tbeer-related-post .tbeer-news-post-meta a:hover:before,
+        .tbeer-comments-submit-section .tbeer-comments-form form button:hover,
+        .tbeer-search-result-section .tbeer-single-post-wrapper .tbeer-main-content .tbeer-search-result .tbeer-search-result-details .tbeer-news-post-meta a:hover:before,div.tbeer-category-meta a   {
+          background-color: '.$main_custom_color_primary.';
         }
-        header.tbeer-header .navbar .tbeer-header-bottombar .tbeer-menu-wrapper ul.tbeer-menus li a:hover {
-        color: '.$main_custom_color_hover.';
+        header.tbeer-header .navbar .tbeer-menu-wrapper ul.tbeer-menus li a:hover,
+        header.tbeer-header .navbar .tbeer-menu-wrapper ul.tbeer-menus li.active a:hover,
+        header.tbeer-header .navbar .tbeer-menu-wrapper ul.tbeer-menus li.has-submenu:hover:after,
+        header.tbeer-header .navbar .tbeer-menu-wrapper ul.tbeer-menus li ul.tbeer-dropdown-menu li a:hover,
+        header.tbeer-header .navbar .tbeer-menu-wrapper ul.tbeer-menus li ul.tbeer-dropdown-menu li.has-submenu a:hover:after,
+        footer .tbeer-footer-top .tbeer-footer-widgets-area .tbeer-footer-widget .tbeer-footer-widget-details ul li a:hover,
+        footer .tbeer-footer-bottom .tbeer-footer-menu ul li a:hover,
+        .tbeer-featured-news-column .tbeer-featured-news .tbeer-news-details h3 a:hover,
+        .tbeer-featured-news-column .tbeer-featured-news .tbeer-news-details .tbeer-news-post-meta a:hover,
+        .tbeer-featured-news-column .tbeer-featured-news .tbeer-news-details .tbeer-news-post-meta a:hover:before,
+        .tbeer-main-news .tbeer-news-post-meta a:hover,
+        .tbeer-main-news .tbeer-news-post-meta a:hover:before,
+        .tbeer-latest-article .tbeer-latest-article-details h3 a:hover ,
+        .tbeer-latest-article .tbeer-latest-article-details .tbeer-news-post-meta a:hover,
+        .tbeer-trending-article .tbeer-trending-article-details a.tbeer-category-meta,
+        .tbeer-trending-article .tbeer-trending-article-details h3 a:hover,
+        .tbeer-trending-article .tbeer-trending-article-details .tbeer-news-post-meta a:hover,
+        .tbeer-comments .tbeer-comment-details h3 a:hover,
+        .tbeer-comments .tbeer-comment-details a.tbeer-comment-reply:hover,
+        .tbeer-sidebar .tbeer-sidebar-widget h3.tbeer-sidebar-widget-title,
+        .tbeer-trending-news-post .tbeer-trending-news-details h3.tbeer-news-post-heading a:hover,
+        .tbeer-popular-news-post .tbeer-popular-news-details h3 a:hover,
+        .tbeer-category-widget h3.tbeer-cat-title,
+        .tbeer-category-widget ul li a:hover,
+        .tbeer-trending-news-section .tbeer-trending-news-wrapper ul li a:hover,
+        .tbeer-must-read-news-section .tbeer-main-content .tbeer-must-read-news-wrapper .tbeer-must-read-news .tbeer-must-read-news-details h3 a:hover,
+        .tbeer-must-read-news-section .tbeer-main-content .tbeer-must-read-news-wrapper .tbeer-must-read-news .tbeer-must-read-news-details .tbeer-news-post-meta a:hover,
+        .tbeer-must-read-news-section .tbeer-main-content .tbeer-numbered-news-post-wrapper .tbeer-numbered-news-post h3.tbeer-news-post-heading a:hover,
+        .tbeer-post-title-metas h1.tbeer-news-post-heading a:hover,
+        .tbeer-post-title-metas .tbeer-author-commnets-count .tbeer-posting-time-wrapper p a.tbeer-author-name:hover,
+        .tbeer-post-title-metas .tbeer-author-commnets-count .tbeer-comment-view-wrapper ul li a:hover,
+        .tbeer-next-prev-post-pagination .tbeer-prev-post .tbeer-other-post-title-wrapper h2 a:hover,
+        .tbeer-next-prev-post-pagination .tbeer-next-post .tbeer-other-post-title-wrapper h2 a:hover,
+        .tbeer-author-details-section .tbeer-author-wrapper .tbeer-author-details h3 a:hover,
+        .tbeer-related-post-secion .tbeer-related-post-wrapper .tbeer-related-post .tbeer-news-post-meta a:hover,
+        .tbeer-search-result-section .tbeer-single-post-wrapper .tbeer-main-content .tbeer-search-result .tbeer-search-result-details a.tbeer-category-meta,
+        .tbeer-search-result-section .tbeer-single-post-wrapper .tbeer-main-content .tbeer-search-result .tbeer-search-result-details h3 a:hover,
+        .tbeer-search-result-section .tbeer-single-post-wrapper .tbeer-main-content .tbeer-search-result .tbeer-search-result-details .tbeer-news-post-meta a:hover    
+         {
+          color: '.$main_custom_color_primary.';
         }
-        header.tbeer-header .navbar .tbeer-header-bottombar .tbeer-menu-wrapper ul.tbeer-menus li.has-submenu:hover:after {
-        color: '.$main_custom_color_hover.';
-        }
-        header.tbeer-header .navbar .tbeer-header-bottombar .tbeer-menu-wrapper ul.tbeer-menus li ul.tbeer-dropdown-menu li a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        header.tbeer-header .navbar .tbeer-header-bottombar .tbeer-menu-wrapper ul.tbeer-menus li ul.tbeer-dropdown-menu li.has-submenu a:hover:after {
-         color: '.$main_custom_color_hover.';
-        }
-        footer .tbeer-footer-top .tbeer-footer-widgets-area .tbeer-footer-widget .tbeer-footer-widget-details ul li a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        footer .tbeer-footer-bottom .tbeer-footer-menu ul li a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-btn {
-          background-color: '.$main_custom_color_primary.';    
-        }
-        .tbeer-btn.tbeer-outline-btn:hover {
-          background-color: '.$main_custom_color_hover.';
-        }
-        .tbeer-latest-article-post .tbeer-latest-post-details .tbeer-category-meta a{
-        background-color: '.$main_custom_color_primary.';
-        }
-        .tbeer-single-post-wrapper .tbeer-category-meta a {
-         background-color: '.$main_custom_color_primary.';
-        }
-        .tbeer-featured-news-section .tbeer-main-featured-post .tbeer-featured-post-details .tbeer-category-meta a {
-        background-color: '.$main_custom_color_primary.';
-        }
-        
-        .tbeer-must-read-news-section .tbeer-main-content .tbeer-must-read-news-wrapper .tbeer-must-read-news .tbeer-must-read-news-details .tbeer-category-meta a {
-        color: '.$main_custom_color_primary.';
-        }
-        
-        .tbeer-search-result-section .tbeer-single-post-wrapper .tbeer-main-content .tbeer-search-result .tbeer-search-result-details .tbeer-category-meta a{
-        color: '.$main_custom_color_primary.';
-        }
-        footer .tbeer-footer-top .tbeer-footer-widgets-area .tbeer-footer-widget ul li a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-featured-news-section .tbeer-main-featured-post .tbeer-featured-post-details h3 a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-featured-news-section .tbeer-main-featured-post .tbeer-featured-post-details .tbeer-featured-post-meta a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-featured-news-section .tbeer-main-featured-post .tbeer-featured-post-details .tbeer-featured-post-meta a:hover:before {
-        background-color: '.$main_custom_color_hover.';
-        }
-        .tbeer-featured-news-section .tbeer-other-featured-post-wrapper .tbeer-featured-post .tbeer-featured-post-details h3 a:hover {
-         color: '.$main_custom_color_hover.';
-        }
-        .tbeer-latest-article-post .tbeer-latest-post-details h3 a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        
-        .tbeer-latest-article-post .tbeer-latest-post-details .tbeer-latest-post-meta a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-latest-article-post .tbeer-latest-post-details .tbeer-latest-post-meta a:hover:before {
-        background-color: '.$main_custom_color_hover.';
-        }
-        .tbeer-comments .tbeer-comment-details h3 a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        
-        .tbeer-comments .tbeer-comment-details a.tbeer-comment-reply:hover {
-        color: '.$main_custom_color_hover.';
-        }        
-        
-        
-        .tbeer-trending-news-post .tbeer-trending-news-details h3.tbeer-news-post-heading a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        
-        .tbeer-trending-news-section .tbeer-trending-news-wrapper ul li a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-trending-news-section .tbeer-trending-news-wrapper ul li a:hover:before {
-        background-color: '.$main_custom_color_hover.';
-        }
-        
-        .tbeer-must-read-news-section .tbeer-section-title-wrapper h3.tbeer-section-btn-style-title {
-        background-color: '.$main_custom_color_primary.';
-        }
-        .tbeer-must-read-news-section .tbeer-main-content .tbeer-must-read-news-wrapper .tbeer-must-read-news .tbeer-must-read-news-details h3 a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        
-        .tbeer-must-read-news-section .tbeer-main-content .tbeer-must-read-news-wrapper .tbeer-must-read-news .tbeer-must-read-news-details .tbeer-news-post-meta a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-must-read-news-section .tbeer-main-content .tbeer-must-read-news-wrapper .tbeer-must-read-news .tbeer-must-read-news-details .tbeer-news-post-meta a:hover:before {
-        background-color: '.$main_custom_color_hover.';
-        }
-        .tbeer-must-read-news-section .tbeer-main-content .tbeer-numbered-news-post-wrapper .tbeer-numbered-news-post h3.tbeer-news-post-heading a:hover {
-         color: '.$main_custom_color_hover.';
-        }
-        .tbeer-post-title-metas h1.tbeer-news-post-heading a:hover {
-            color: '.$main_custom_color_hover.';
-        }
-        .tbeer-next-prev-post-pagination .tbeer-prev-post .tbeer-other-post-title-wrapper h2 a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-next-prev-post-pagination .tbeer-next-post .tbeer-other-post-title-wrapper h2 a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-author-details-section .tbeer-author-wrapper .tbeer-author-details h3 a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        
-        .tbeer-related-post-secion .tbeer-related-post-wrapper .tbeer-related-post .tbeer-news-post-meta a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-related-post-secion .tbeer-related-post-wrapper .tbeer-related-post .tbeer-news-post-meta a:hover:before {
-        background-color: '.$main_custom_color_hover.';
-        }
-        
-        .tbeer-comments-submit-section .tbeer-comments-form form button:hover {
-        background-color: '.$main_custom_color_hover.';
-        }
-        
-        .tbeer-search-result-section .tbeer-single-post-wrapper .tbeer-main-content .tbeer-search-result .tbeer-search-result-details h3 a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        
-        .tbeer-search-result-section .tbeer-single-post-wrapper .tbeer-main-content .tbeer-search-result .tbeer-search-result-details .tbeer-news-post-meta a:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        .tbeer-search-result-section .tbeer-single-post-wrapper .tbeer-main-content .tbeer-search-result .tbeer-search-result-details .tbeer-news-post-meta a:hover:before {
-        background-color: '.$main_custom_color_hover.';
-        }
-        .tbeer-post-title-metas .tbeer-author-commnets-count .tbeer-posting-time-wrapper p a.tbeer-author-name:hover {
-        color: '.$main_custom_color_hover.';
-        }
-        ';
+        @media only screen and (max-width: 767px) {
+          header.tbeer-header .navbar .tbeer-menu-wrapper ul.tbeer-menus li ul.tbeer-dropdown-menu li a:hover {
+            color: '.$main_custom_color_primary.';
+          }
+        }';
     wp_add_inline_style( 'wodog-style', $color_variation );
   }
 add_action('wp_enqueue_scripts', 'wodog_load_theme_assets');
