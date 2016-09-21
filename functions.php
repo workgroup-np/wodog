@@ -548,7 +548,7 @@ if ( ! class_exists( 'Wodog_Recent_Posts_Widget' ) ) :
             if ( absint( $post_category ) > 0  ) {
                 $header_args=array(
                 'post_type'=>'post',
-                'posts_per_page'=>4,
+                'posts_per_page'=>5,
                 'orderby' => 'date',
                 'order'   => 'DESC',
                 'cat' => $post_category,
@@ -586,35 +586,36 @@ if ( ! class_exists( 'Wodog_Recent_Posts_Widget' ) ) :
                             $alt = get_post_meta($thumbnail, '_wp_attachment_image_alt', true);
                             $w=($i==1)?"1170":"250";
                             $h=($i==1)?"427":"250";
-                            $featured_class=($i==1)?"tbeer-main-featured-post":"tbeer-other-featured-post-wrapper";
+                            $featured_class=($i==3) ? "tbeer-featured-news tbeer-main-news" : "tbeer-featured-news tbeer-half-height";
                             if($img_url)
-                                $url = aq_resize( $img_url[0], $width =$w, $height = $h, $crop = true, $single = true, $upscale = true );
+                                $url = aq_resize( $img_url[0], $width =389, $height = 534, $crop = true, $single = true, $upscale = true );
                             else{
                                 $url=get_template_directory_uri().'/assets/images/no-image.png';
                                 $alt="No Image";
                             }
-                                if( $i<=2) echo '<div class="'.$featured_class.'">';
-                                if( $i>1 ) echo '<div class="tbeer-featured-post">'?>
-                                    <div class="tbeer-image-wrapper">
+                                if ($i==1 || $i==3 || $i==4 ) : echo '<div class="tbeer-featured-news-column">'; endif; 
+                                echo '<div class="'.$featured_class.'">';?>
+                                    <div class="tbeer-featured-img">
                                         <img src="<?php echo esc_url($url);?>" alt="<?php echo esc_attr($alt);?>">
                                     </div>
-                                    <div class="tbeer-featured-post-details">
-                                        <?php if( $i==1 ):?><div class="tbeer-category-meta"> <?php if (get_the_category()) : ?><?php the_category(' / ');endif; ?></div>
-                                        <?php endif;?>
-                                        <h3 class="tbeer-featured-post-heading">
+                                    <div class="tbeer-news-details">
+                                        <div class="tbeer-category-meta"> <?php if (get_the_category()) : ?><?php the_category(' / ');endif; ?></div>
+                                        <h3 class="tbeer-news-post-heading">
                                             <a href="<?php the_permalink();?>"><?php the_title();?></a>
                                         </h3>
-                                        <?php if( $i==1 ):?>
-                                        <div class="tbeer-featured-post-meta">
-                                            <span class="tbeer-featured-post-date"><?php echo date("m.d.y");  ?></span>
+                                        <div class="tbeer-news-post-meta">
+                                            <?php if($i==3):?>
+                                            <span class="tbeer-featured-post-date"><?php echo date("m.d.y");  ?>
+                                            </span>
+                                            <?php endif;?>
+                                        <?php if($i!=3): _e('by','wodog'); endif;?>&nbsp;
                                         <?php the_author_posts_link(); ?>
                                         </div>
-                                        <?php endif;?>
                                     </div>
                                 <?php echo '</div>';
+                                if( $i==2 || $i==3 || $i==5 ): echo '</div>'; endif;
                          $i++;
                         endwhile;
-                        if( $i>1 ) echo '</div>';
                         echo '</div>
                             </div>
                         </div>
